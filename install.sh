@@ -3,6 +3,7 @@
 # --- RDP-LITE: One-Block Setup Script for MATE/CRD ---
 
 # 1. Clean up any previous, potentially conflicting CRD or XFCE installations
+# '|| true' allows the script to continue if the packages aren't installed
 sudo apt purge -y chrome-remote-desktop ^xfce4* || true && sudo apt autoremove -y
 
 # 2. Update and install MATE Desktop, necessary X components, and dependencies
@@ -25,5 +26,8 @@ sudo bash -c 'echo "exec /etc/X11/Xsession /usr/bin/mate-session" > /etc/chrome-
 rm chrome-remote-desktop_current_amd64.deb
 
 # --- Setup Complete ---
+echo "========================================================================"
 echo "MATE Desktop and Chrome Remote Desktop Host installed successfully!"
-echo "NEXT STEP: You must run the manual authorization command in your terminal."
+echo "NEXT STEP IS CRITICAL: YOU MUST RUN THE MANUAL AUTHORIZATION COMMAND."
+echo "See the README or visit: https://remotedesktop.google.com/headless"
+echo "========================================================================"
