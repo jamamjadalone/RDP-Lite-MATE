@@ -1,4 +1,3 @@
-```markdown
 # 🚀 RDP-Lite-MATE: Easy Cloud Remote Desktop Setup
 
 This repository provides a single, robust script to set up a clean, lightweight **MATE Desktop Environment** and **Chrome Remote Desktop (CRD) Host** on Debian/Ubuntu-based Linux cloud environments (such as Google Cloud Shell or standard Debian/Ubuntu VMs).
@@ -15,15 +14,14 @@ Run the following command in your Cloud Shell or Linux terminal. This command ha
 
 ```bash
 wget https://raw.githubusercontent.com/jamamjadalone/RDP-Lite-MATE/main/install.sh && chmod +x install.sh && ./install.sh
-```
 
-> **Note**: The script may take a few minutes to complete as it downloads and installs all necessary packages. Wait until you see the "Setup Complete" message in your terminal.
+Note: The script may take a few minutes to complete as it downloads and installs all required packages. Wait until you see the "Setup Complete" message in your terminal.
 
-### Step 2: Crucial Final Step (Manual Authorization)
+## 🔑 Step 2: Crucial Final Step (Manual Authorization)
 
 After the script finishes, the host is installed, but it is **not yet linked to your Google Account**. This step is mandatory and cannot be automated:
 
-#### 📋 Authorization Process:
+### 📋 Authorization Process:
 
 1. **Generate Code**: Open this link in your browser:  
    **[Chrome Remote Desktop Headless Setup](https://remotedesktop.google.com/headless)**
@@ -56,24 +54,5 @@ sudo apt install -y --fix-broken
 
 # Clean up the downloaded file
 rm google-chrome-stable_current_amd64.deb
-```
 
-> **Tip**: After installation, you can launch Chrome from the MATE desktop applications menu or by running `google-chrome` in the terminal.
-
----
-
-## 🛠️ Troubleshooting
-
-If you encounter any issues:
-- Ensure your cloud instance has sufficient resources (at least 2GB RAM recommended)
-- Check that all dependencies were installed correctly
-- Verify your Google Account has access to Chrome Remote Desktop
-- Restart the Chrome Remote Desktop service if needed
-
-## 📝 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-
-**Enjoy your cloud remote desktop!** 🎉
-```
+ **Tip**: After installation, you can launch Chrome from the MATE desktop applications menu or by running `google-chrome` in the terminal.
