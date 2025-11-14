@@ -108,16 +108,16 @@ After the script finishes, **authorization is mandatory** to link the host to yo
 To add the **Google Chrome browser** to your MATE desktop session, run these commands **after your remote connection is confirmed online**:
 
 ```bash
-# Download Google Chrome stable release
+# 1. Download the current stable Google Chrome package for 64-bit systems
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 
-# Install the package
-sudo dpkg --install google-chrome-stable_current_amd64.deb
+# 2. List files to confirm the download (uses your 'ls' command)
+ls
 
-# Fix any dependency issues (if needed)
-sudo apt install -y --fix-broken
+# 3. Install the package using apt, which handles dependencies (uses your 'sudo apt install' command)
+sudo apt install ./google-chrome-stable_current_amd64.deb
 
-# Clean up the installer file
+# 4. Clean up the downloaded file after installation
 rm google-chrome-stable_current_amd64.deb
 ```
 
